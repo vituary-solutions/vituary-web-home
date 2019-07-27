@@ -1,28 +1,30 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <q-toolbar class="header bg-primary text-white">
+      <q-toolbar-title><router-link to="/">Vituary Solutions</router-link></q-toolbar-title>
+
+      <q-btn flat round icon="fas fa-envelope" type="a" href="mailto:jguertin@vituary.com"><q-tooltip>Email</q-tooltip></q-btn>
+      <q-btn flat round icon="fab fa-github" type="a" href="https://github.com/jguertin"><q-tooltip>Github</q-tooltip></q-btn>
+      <q-btn flat round icon="fab fa-linkedin" type="a" href="https://www.linkedin.com/in/justinguertin"><q-tooltip>LinkedIn</q-tooltip></q-btn>
+      <q-btn flat round icon="fab fa-twitter" type="a" href="https://twitter.com/jguertin"><q-tooltip>Twitter</q-tooltip></q-btn>
+    </q-toolbar>
+
+    <router-view></router-view>
+
+    <div class="copyright q-pt-md text-center">© 2019 Vituary Solutions Inc.</div>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
 export default {
-  name: 'app',
-  components: {
-    HelloWorld
-  }
+  name: 'app'
 }
 </script>
 
-<style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+<style lang="stylus">
+.copyright
+  color #2c3e50
+.header a
+  text-decoration inherit
+  color inherit
 </style>
