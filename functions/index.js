@@ -6,6 +6,7 @@ const nodemailer = require('nodemailer');
 // A valid gmail account is required.  You'll need to configure these as cloud environment variables.
 const gmailEmail = functions.config().gmail.email;
 const gmailPassword = functions.config().gmail.password;
+const contactEmail = functions.config().contact.email;
 
 const mailTransport = nodemailer.createTransport({
     service: "Gmail",
@@ -22,8 +23,8 @@ const fireEmail = async (mailOptions) => {
 
 const sendContactEmail = async (formData) => {
     const mailOptions = {
-        from: '"Vituary Solutions" <noreply@vituary.com>',
-        to: 'contact@vituary.com',
+        from: gmailEmail,
+        to: contactEmail,
         subject: 'Contact Form Submitted: ' + formData.name,
         text: `A new contact request was received!\nName: ${formData.name}\nCompany: ${formData.company}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`
     };
