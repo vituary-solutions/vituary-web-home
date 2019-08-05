@@ -57,6 +57,21 @@
                         <div class="text-subtitle2">Solutions Architect, President</div>
                     </router-link>
                 </div>
+
+                <div class="text-h3 text-center q-pt-xl q-pb-sm">Contact Us</div>
+                <div class="q-pa-sm">
+                    <q-form @submit="onSubmit" class="q-gutter-md">
+                        <q-input v-model="name" label="Your Name"
+                                 lazy-rules :rules="[ val => val && val.length > 0 || 'This field is required']" />
+                        <q-input v-model="company" label="Company Name" lazy-rules :rules="[true]" />
+                        <q-input v-model="email" type="email" label="Email"
+                                 lazy-rules :rules="[ val => val && val.length > 0 || 'This field is required']" />
+                        <q-input v-model="message" type="textarea" label="Message"
+                                 lazy-rules :rules="[ val => val && val.length > 0 || 'This field is required']" />
+
+                        <q-btn label="Submit" type="submit" color="primary"/>
+                    </q-form>
+                </div>
             </div>
             <q-space></q-space>
         </div>
@@ -65,7 +80,48 @@
 
 <script>
 export default {
-    name: 'Home'
+    name: 'Home',
+    data() {
+        return {
+            name: '',
+            company: '',
+            email: '',
+            message: ''
+        }
+    },
+    methods: {
+        onSubmit() {
+            const formData = {
+                name: this.$data.name,
+                company: this.$data.company,
+                email: this.$data.email,
+                message: this.$data.message
+            };
+
+            fetch('/contact', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(formData)
+            }).then(response => {
+                if (response.ok) {
+                    this.$q.notify({
+                        color: 'green-4',
+                        textColor: 'white',
+                        icon: 'fas fa-check-circle',
+                        message: 'Submitted'
+                    })
+                }
+                else {
+                    this.$q.notify({
+                        color: 'red-5',
+                        textColor: 'white',
+                        icon: 'fas fa-exclamation-triangle',
+                        message: "Submission failed.  Please try emailing us directly at contact@vituary.com."
+                    });
+                }
+            });
+        }
+    }
 }
 </script>
 
