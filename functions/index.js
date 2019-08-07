@@ -25,7 +25,7 @@ const sendContactEmail = async (formData) => {
     const mailOptions = {
         from: gmailEmail,
         to: contactEmail,
-        subject: 'Contact Form Submitted: ' + formData.name,
+        subject: 'New Contact Request: ' + formData.name,
         text: `A new contact request was received!\nName: ${formData.name}\nCompany: ${formData.company}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`
     };
 
@@ -47,7 +47,7 @@ exports.onContactSubmitted = functions.https.onRequest(async (req, res) => {
         return res.sendStatus(201);
     }
     catch (ex) {
-        console.error(`There was an error while sending the email: ${ex}`);
+        console.error(`There was an error while sending a new contact request (${formData.email}): ${ex}`);
         return res.sendStatus(500);
     }
 });
