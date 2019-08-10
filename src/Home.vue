@@ -1,11 +1,8 @@
 <template>
     <div class="home">
         <div class="row">
-            <q-parallax src="/new_york.jpg">
-                <div class="text-white text-center">
-                    <div class="root-name">Vituary</div>
-                    <div class="postfix-name">Solutions</div>
-                </div>
+            <q-parallax src="/computer-desk.jpeg">
+                <q-img src="/logo-vertical-text.png" class="vertical-top content-center" style="height: 300px; width: 528px" />
             </q-parallax>
         </div>
 

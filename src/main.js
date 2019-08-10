@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import Quasar, { QAvatar, QBtn, QCard, QCardSection, QExpansionItem, QForm, QIcon, QInput, QItem, QItemLabel,
+import Quasar, { QAvatar, QBtn, QCard, QCardSection, QExpansionItem, QForm, QIcon, QImg, QInput, QItem, QItemLabel,
   QItemSection, QLinearProgress, QList, QParallax, QSpace, QToolbar, QToolbarTitle, QTooltip } from 'quasar'
 
 import App from './App.vue'
@@ -11,8 +11,20 @@ Vue.config.productionTip = false;
 Vue.use(VueRouter);
 Vue.use(Quasar, {
   components: {
-    QAvatar, QBtn, QCard, QCardSection, QExpansionItem, QForm, QIcon, QInput, QItem, QItemLabel, QItemSection,
+    QAvatar, QBtn, QCard, QCardSection, QExpansionItem, QForm, QIcon, QImg, QInput, QItem, QItemLabel, QItemSection,
     QLinearProgress, QList, QParallax, QSpace, QToolbar, QToolbarTitle, QTooltip
+  },
+  config: {
+    brand: {
+      primary: '#36877f',
+      secondary: '#2e3a82',
+      accent: '#f08969',
+
+      positive: '#61c9ac',
+      negative: '#c10015',
+      info: '#3298db',
+      warning: '#f5ea53'
+    }
   }
 });
 

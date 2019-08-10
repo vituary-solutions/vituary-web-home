@@ -187,7 +187,7 @@ export default {
         },
         {
             name: "Tools & Platforms",
-            color: "positive",
+            color: "tertiary",
             values: [
                 { name: "RDBMS", value: 1.0 },
                 { name: "Gradle", value: 1.0 },

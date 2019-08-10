@@ -38,9 +38,8 @@ exports.onContactSubmitted = functions.https.onRequest(async (req, res) => {
         return res.sendStatus(405);
     }
 
+    const formData = req.body;
     try {
-        const formData = req.body;
-    
         //here we send new data using function for sending emails
         await sendContactEmail(formData);
     
