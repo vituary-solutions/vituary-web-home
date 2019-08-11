@@ -97,8 +97,6 @@
             </div>
         </div>
 
-
-
     </q-page>
 </template>
 
@@ -129,12 +127,11 @@ export default {
 .company
   font-weight bold
 
-.position {
-    font-weight: bold;
-    font-style: italic;
-}
-.dates {
-    font-size: 0.8em;
-    text-transform: uppercase;
-}
+.position
+  font-weight bold
+  font-style italic
+
+.dates
+  font-size: 0.8em
+  text-transform: uppercase
 </style>

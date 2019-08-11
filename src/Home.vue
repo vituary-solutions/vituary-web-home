@@ -15,11 +15,11 @@
         </div>
 
         <div class="row">
-            <q-space></q-space>
+            <q-space />
             <div class="body col-xs-12 col-sm-8 col-md-6">
                 <div class="text-h3 text-center q-pt-xl q-pb-sm">Delivering Expert Solutions</div>
                 <p class="q-pa-sm">At Vituary, we understand that primary goal of our customers is to deliver a great experience to their users.  Features need to be delivered quickly, reliably and with high quality.  We embrace the lessons taught to us by the DevOps movement and endeavor to empower our customers to provide a great experience to their users.</p>
-                <p class="q-pa-sm">We can work with you independently, or as part of a team, to ensure you're getting the best value out of your investment.  We believe that to be successful software needs to be delivered early and often.  As a result, we will build capabilities that ensure sustainability into our solutions from day 1, giving our customers confidence that they can continue to deliver a great experience long after we're gone.</p>
+                <p class="q-pa-sm">We can work with you independently or as part of a team to ensure you're getting the best value out of your investment.  We believe that to be successful software needs to be delivered early and often.  As a result, we will build capabilities that ensure sustainability into our solutions from day 1, giving our customers confidence that they can continue to deliver a great experience long after we're gone.</p>
 
                 <div class="text-h3 text-center q-pt-xl q-pb-sm">Experienced Consults</div>
                 <p class="q-pt-sm q-mb-sm">We have a wealth of experience in all aspects of the software delivery life cycle. We are available for consultation on a variety of topics:</p>
@@ -54,12 +54,12 @@
                     </div>
                 </div>
 
-                <div class="text-h3 text-center q-pt-xl q-pb-sm">Who Are We</div>
+                <div class="text-h3 text-center q-pt-xl q-pb-sm">Who We Are</div>
                 <div class="resume-link text-center q-pa-sm">
                     <router-link to="/jguertin">
                         <q-avatar class="headshot" size="120px"><img src="/jguertin_headshot.jpg" /></q-avatar>
                         <div class="text-subtitle1">Justin Guertin</div>
-                        <div class="text-subtitle2">Solutions Architect, President</div>
+                        <div class="text-subtitle2">Solutions Architect, Owner</div>
                     </router-link>
                 </div>
 
@@ -78,7 +78,7 @@
                     </q-form>
                 </div>
             </div>
-            <q-space></q-space>
+            <q-space />
         </div>
 
     </q-page>

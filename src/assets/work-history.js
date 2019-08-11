@@ -6,12 +6,12 @@ export default {
         {
             company: "Vituary Solutions",
             url: "http://www.vituary.com/",
-            position: "Solutions Architect, President",
+            position: "Solutions Architect, Owner",
             start: "July 2019",
             end: "Present",
             summary: "Full owner and operator of the organization.",
             highlights: [
-                "Implemented the Material designed corporate website, leveraging Vue.js, Quasar and static content hosting on Google Cloud Platform",
+                "Implemented the Material designed organization website, leveraging Vue.js, Quasar and static content hosting on Firebase",
                 "Provided social media and open source footprint"
             ]
         },
@@ -56,7 +56,7 @@ export default {
                 "Migrated monolithic deployment of Clarity LIMS and dependencies to docker based approach for individual components",
                 "Introduced microservices approach to decouple stateful components from the application",
                 "Replaced daily indexing of sample search system with live indexing using RabbitMQ, Spring Boot and Elasticsearch",
-                "Led development porting system configuration from a legacy desktop interface to a web interface"
+                "Led development team porting system configuration from a legacy desktop interface to a web interface"
             ]
         },
         {
@@ -108,7 +108,7 @@ export default {
             position: "Java Programmer",
             start: "October 2005",
             end: "December 2008",
-            summary: "Member of a development team responsible for maintenance and implementation new features for Java based emergency resource manage systems.",
+            summary: "Member of a development team responsible for maintenance and implementation new features for Java based emergency resource management systems.",
             highlights: [
                 "Involved in design and implementation of new systems and features",
                 "Led all aspects of Fuel Management Pilot web application for UBCM and MoF",
@@ -125,7 +125,7 @@ export default {
             highlights: [
                 "Delivered the order processing system used to intake orders from all partners and end users",
                 "Implemented system for importing ISBN data and images from 3rd party vendor",
-                "Maintained batch processes for matching saved searches and delivering email notification",
+                "Maintained batch processes for matching saved searches and delivering email notifications",
                 "Wrote scripts to import unique customer data formats",
                 "Added customer facing features to web UI using Java servlets"
             ]
