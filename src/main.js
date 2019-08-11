@@ -37,6 +37,7 @@ const routes = [
 ];
 
 const router = new VueRouter({
+  mode: 'history',
   routes,
   // eslint-disable-next-line
   scrollBehavior (to, from, savedPosition) {

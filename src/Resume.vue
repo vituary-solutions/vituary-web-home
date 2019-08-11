@@ -2,13 +2,18 @@
     <q-page padding>
 
         <div class="row">
-            <div class="headshot col-xs-3 col-sm-2 col-md-1">
+            <div class="headshot col-xs-4 col-sm-3 col-md-2">
                 <q-avatar><img src="/jguertin_headshot.jpg" /></q-avatar>
             </div>
-            <div class="col q-pa-sm">
+            <div class="col-xs-8 col-sm-9 col-md-10 q-pa-md">
                 <div class="text-h4">{{ experience.name }}</div>
                 <div class="text-h6">{{ experience.headline }}</div>
                 <div>{{ experience.about }}</div>
+                <div>
+                    <span v-for="link in experience.links" v-bind:key="link.name">
+                        <q-btn flat round :icon="link.icon" :href="link.url" type="a" target="_blank"><q-tooltip>{{link.name}}</q-tooltip></q-btn>
+                    </span>
+                </div>
             </div>
         </div>
 

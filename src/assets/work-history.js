@@ -2,6 +2,11 @@ export default {
     name: "Justin Guertin",
     headline: "Full Stack Developer, Solutions Architect, Empowering Leader",
     about: "With over 20 years of practice building software solutions, I am focused on delivering software that provides a great experience for end users.  I leverage modern processes and technologies to build quality into software delivery.",
+    links: [
+        { name: "LinkedIn", url: "https://www.linkedin.com/in/justinguertin", icon: "fab fa-linkedin" },
+        { name: "Twitter", url: "https://twitter.com/jguertin", icon: "fab fa-twitter" },
+        { name: "Github", url: "https://github.com/jguertin", icon: "fab fa-github" }
+    ],
     jobs: [
         {
             company: "Vituary Solutions",
