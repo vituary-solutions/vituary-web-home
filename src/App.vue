@@ -6,7 +6,7 @@
         <q-toolbar-title><router-link to="/"><q-img src="/logo-horizontal-text.png" class="header-logo" /></router-link></q-toolbar-title>
 
         <q-btn flat round icon="fab fa-github" type="a" target="_blank" href="https://github.com/vituary-solutions"><q-tooltip>Github</q-tooltip></q-btn>
-        <q-btn flat round icon="fab fa-linkedin" type="a" target="_blank" href="https://www.linkedin.com/in/justinguertin"><q-tooltip>LinkedIn</q-tooltip></q-btn>
+        <q-btn flat round icon="fab fa-linkedin" type="a" target="_blank" href="https://www.linkedin.com/company/vituary"><q-tooltip>LinkedIn</q-tooltip></q-btn>
         <q-btn flat round icon="fab fa-twitter" type="a" target="_blank" href="https://twitter.com/vituarysol"><q-tooltip>Twitter</q-tooltip></q-btn>
       </q-toolbar>
     </q-header>
