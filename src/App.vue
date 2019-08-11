@@ -1,17 +1,27 @@
 <template>
-  <div id="app">
-    <q-toolbar class="header bg-secondary text-white">
-      <q-toolbar-title><router-link to="/"><q-img src="/logo-horizontal-text.png" style="height: 1.718em; width: 12.568em;"></q-img></router-link></q-toolbar-title>
+  <q-layout view="hhh lpR fff">
 
-      <q-btn flat round icon="fab fa-github" type="a" href="https://github.com/vituary-solutions"><q-tooltip>Github</q-tooltip></q-btn>
-      <q-btn flat round icon="fab fa-linkedin" type="a" href="https://www.linkedin.com/in/justinguertin"><q-tooltip>LinkedIn</q-tooltip></q-btn>
-      <q-btn flat round icon="fab fa-twitter" type="a" href="https://twitter.com/vituarysol"><q-tooltip>Twitter</q-tooltip></q-btn>
-    </q-toolbar>
+    <q-header elevated class="bg-secondary text-white">
+      <q-toolbar>
+        <q-toolbar-title><router-link to="/"><q-img src="/logo-horizontal-text.png" class="header-logo" /></router-link></q-toolbar-title>
 
-    <router-view></router-view>
+        <q-btn flat round icon="fab fa-github" type="a" target="_blank" href="https://github.com/vituary-solutions"><q-tooltip>Github</q-tooltip></q-btn>
+        <q-btn flat round icon="fab fa-linkedin" type="a" target="_blank" href="https://www.linkedin.com/in/justinguertin"><q-tooltip>LinkedIn</q-tooltip></q-btn>
+        <q-btn flat round icon="fab fa-twitter" type="a" target="_blank" href="https://twitter.com/vituarysol"><q-tooltip>Twitter</q-tooltip></q-btn>
+      </q-toolbar>
+    </q-header>
 
-    <div class="copyright q-pt-md text-center">© 2019 Vituary Solutions Inc.</div>
-  </div>
+    <q-page-container>
+      <router-view />
+    </q-page-container>
+
+    <q-footer elevated class="bg-primary text-white">
+      <q-toolbar>
+        <q-toolbar-title class="text-center">© 2019 Vituary Solutions Inc.</q-toolbar-title>
+      </q-toolbar>
+    </q-footer>
+
+  </q-layout>
 </template>
 
 <script>
@@ -21,11 +31,11 @@ export default {
 </script>
 
 <style lang="stylus">
-.copyright
-  color #2c3e50
-.header a
-  text-decoration inherit
-  color inherit
+.header-logo
+  height 38px
+  width 278px
+
+// Add a "tertiary" colour to the theme
 .text-tertiary
   color #a2aa33
 .bg-tertiary

@@ -1,7 +1,8 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import Quasar, { QAvatar, QBtn, QCard, QCardSection, QExpansionItem, QForm, QIcon, QImg, QInput, QItem, QItemLabel,
-  QItemSection, QLinearProgress, QList, QParallax, QSpace, QToolbar, QToolbarTitle, QTooltip } from 'quasar'
+import Quasar, { QAvatar, QBtn, QCard, QCardSection, QExpansionItem, QFooter, QForm, QHeader, QIcon, QImg, QInput,
+  QItem, QItemLabel, QItemSection, QLayout, QLinearProgress, QList, QPage, QPageContainer, QParallax, QSpace, QToolbar,
+  QToolbarTitle, QTooltip } from 'quasar'
 
 import App from './App.vue'
 import Home from './Home.vue'
@@ -11,8 +12,9 @@ Vue.config.productionTip = false;
 Vue.use(VueRouter);
 Vue.use(Quasar, {
   components: {
-    QAvatar, QBtn, QCard, QCardSection, QExpansionItem, QForm, QIcon, QImg, QInput, QItem, QItemLabel, QItemSection,
-    QLinearProgress, QList, QParallax, QSpace, QToolbar, QToolbarTitle, QTooltip
+    QAvatar, QBtn, QCard, QCardSection, QExpansionItem, QFooter, QForm, QHeader, QIcon, QImg, QInput, QItem, QItemLabel,
+    QItemSection, QLayout, QLinearProgress, QList, QPage, QPageContainer, QParallax, QSpace, QToolbar, QToolbarTitle,
+    QTooltip
   },
   config: {
     brand: {

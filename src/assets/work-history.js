@@ -145,7 +145,7 @@ export default {
     skills: [
         {
             name: "Methodologies",
-            color: "accent",
+            color: "primary",
             values: [
                 { name: "Scrum", value: 1.0 },
                 { name: "Kanban", value: 1.0 },
@@ -158,7 +158,7 @@ export default {
         },
         {
             name: "Languages",
-            color: "primary",
+            color: "accent",
             values: [
                 { name: "Java", value: 1.0 },
                 { name: "Groovy", value: 1.0 },

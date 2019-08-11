@@ -1,14 +1,22 @@
 <template>
-    <div class="home">
+    <q-page>
+
         <div class="row">
             <q-parallax src="/computer-desk.jpeg">
-                <q-img src="/logo-vertical-text.png" class="vertical-top content-center" style="height: 300px; width: 528px" />
+                <img src="/logo-vertical-480w.png"
+                       srcset="/logo-vertical-340w.png 340w,
+                               /logo-vertical-410w.png 410w,
+                               /logo-vertical-480w.png 480w"
+                       sizes="(max-width: 599px) 340px,
+                              (max-width: 1023px) 410px,
+                              480px"
+                />
             </q-parallax>
         </div>
 
         <div class="row">
             <q-space></q-space>
-            <div class="body col-6">
+            <div class="body col-xs-12 col-sm-8 col-md-6">
                 <div class="text-h3 text-center q-pt-xl q-pb-sm">Delivering Expert Solutions</div>
                 <p class="q-pa-sm">At Vituary, we understand that primary goal of our customers is to deliver a great experience to their users.  Features need to be delivered quickly, reliably and with high quality.  We embrace the lessons taught to us by the DevOps movement and endeavor to empower our customers to provide a great experience to their users.</p>
                 <p class="q-pa-sm">We can work with you independently, or as part of a team, to ensure you're getting the best value out of your investment.  We believe that to be successful software needs to be delivered early and often.  As a result, we will build capabilities that ensure sustainability into our solutions from day 1, giving our customers confidence that they can continue to deliver a great experience long after we're gone.</p>
@@ -72,7 +80,8 @@
             </div>
             <q-space></q-space>
         </div>
-    </div>
+
+    </q-page>
 </template>
 
 <script>
