@@ -65,7 +65,7 @@
 
                 <div class="text-h3 text-center q-pt-xl q-pb-sm">Contact Us</div>
                 <div class="q-pa-sm">
-                    <q-form @submit="onSubmit" class="q-gutter-md">
+                    <q-form @submit="onSubmit" ref="contactForm" class="q-gutter-md">
                         <q-input v-model="name" label="Your Name"
                                  lazy-rules :rules="[ val => val && val.length > 0 || 'This field is required']" />
                         <q-input v-model="company" label="Company Name" lazy-rules :rules="[true]" />
@@ -98,10 +98,10 @@ export default {
     methods: {
         onSubmit() {
             const formData = {
-                name: this.$data.name,
-                company: this.$data.company,
-                email: this.$data.email,
-                message: this.$data.message
+                name: this.name,
+                company: this.company,
+                email: this.email,
+                message: this.message
             };
 
             fetch('/contact', {
@@ -110,12 +110,19 @@ export default {
                 body: JSON.stringify(formData)
             }).then(response => {
                 if (response.ok) {
+                    this.name = '';
+                    this.company = '';
+                    this.email = '';
+                    this.message = '';
+
+                    this.$refs.contactForm.resetValidation();
+
                     this.$q.notify({
                         color: 'green-4',
                         textColor: 'white',
                         icon: 'fas fa-check-circle',
                         message: 'Submitted'
-                    })
+                    });
                 }
                 else {
                     this.$q.notify({
@@ -147,5 +154,4 @@ export default {
 .resume-link a
     text-decoration inherit
     color inherit
-
 </style>
