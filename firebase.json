@@ -1,14 +1,17 @@
 {
   "hosting": {
-    "public": "dist",
+    "public": "dist/spa",
     "ignore": [
       "firebase.json",
       "**/.*",
       "**/node_modules/**"
     ],
-    "rewrites": [ {
+    "rewrites": [{
       "source": "/contact",
       "function": "onContactSubmitted"
+    }, {
+      "source": "**",
+      "destination": "/index.html"
     }]
   },
   "functions": {

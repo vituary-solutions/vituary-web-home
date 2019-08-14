@@ -1,6 +1,11 @@
+# Standard OS and Node project files
 .DS_Store
+.thumbs.db
 node_modules
 /dist
+
+# Quasar CLI
+.quasar
 
 # local env files
 .env.local
@@ -22,4 +27,4 @@ yarn-error.log*
 
 #Firebase
 .firebaserc
-/.firebase
+.firebase

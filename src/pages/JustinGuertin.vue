@@ -3,7 +3,7 @@
 
         <div class="row">
             <div class="headshot col-xs-4 col-sm-3 col-md-2">
-                <q-avatar><img src="/jguertin_headshot.jpg" /></q-avatar>
+                <q-avatar><img src="statics/images/jguertin_headshot.jpg" /></q-avatar>
             </div>
             <div class="col-xs-8 col-sm-9 col-md-10 q-pa-md">
                 <div class="text-h4">{{ experience.name }}</div>
@@ -106,13 +106,13 @@
 </template>
 
 <script>
-import data from './assets/work-history'
+import data from '../assets/work-history-jguertin'
 
 export default {
-    name: 'Resume',
-    data: () => ({
-        experience: data
-    })
+  name: 'Resume',
+  data: () => ({
+    experience: data
+  })
 }
 </script>
 
