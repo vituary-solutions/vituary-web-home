@@ -59,7 +59,7 @@
           <router-link to="/jguertin">
             <q-avatar class="headshot" size="120px"><img src="statics/images/jguertin_headshot.jpg" /></q-avatar>
             <div class="text-subtitle1">Justin Guertin</div>
-            <div class="text-subtitle2">Solutions Architect, Owner</div>
+            <div class="text-subtitle2">Solutions Architect, Founder</div>
           </router-link>
         </div>
 

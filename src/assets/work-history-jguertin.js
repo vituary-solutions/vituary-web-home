@@ -11,13 +11,15 @@ export default {
     {
       company: 'Vituary Solutions',
       url: 'http://www.vituary.com/',
-      position: 'Solutions Architect, Owner',
+      position: 'Solutions Architect, Founder',
       start: 'July 2019',
       end: 'Present',
-      summary: 'Full owner and operator of the organization.',
+      summary: 'Operator of consulting service aimed at serving customer needs with high quality.',
       highlights: [
         'Implemented the Material designed organization website, leveraging Vue.js, Quasar and static content hosting on Firebase',
-        'Provided social media and open source footprint'
+        'Provided social media and open source footprint',
+        'Developed calendar library in Kotlin',
+        'Assisted client with React.js and Ruby on Rails web application'
       ]
     },
     {

@@ -2,8 +2,8 @@
   "name": "vituary-web-home",
   "productName": "Vituary Solutions",
   "version": "0.0.1",
-  "description": "The public facing website of Vituary Solutions",
-  "author": "Justin Guertin <justin.guertin@gmail.com>",
+  "description": "Vituary Solutions Home Page",
+  "author": "Justin Guertin",
   "private": true,
   "scripts": {
     "dev": "quasar dev",
