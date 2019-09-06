@@ -5,7 +5,8 @@ export default {
   links: [
     { name: 'LinkedIn', url: 'https://www.linkedin.com/in/justinguertin', icon: 'fab fa-linkedin' },
     { name: 'Twitter', url: 'https://twitter.com/jguertin', icon: 'fab fa-twitter' },
-    { name: 'Github', url: 'https://github.com/jguertin', icon: 'fab fa-github' }
+    { name: 'Github', url: 'https://github.com/jguertin', icon: 'fab fa-github' },
+    { name: 'Blogger', url: 'http://opinionatedonjava.blogspot.com/', icon: 'fab fa-blogger' }
   ],
   jobs: [
     {
@@ -14,12 +15,12 @@ export default {
       position: 'Solutions Architect, Founder',
       start: 'July 2019',
       end: 'Present',
-      summary: 'Operator of consulting service aimed at serving customer needs with high quality.',
+      summary: 'Supporting customers with a variety of needs.',
       highlights: [
-        'Implemented the Material designed organization website, leveraging Vue.js, Quasar and static content hosting on Firebase',
+        'Implemented the Material designed website leveraging Vue.js, Quasar and static content hosting on Firebase',
         'Provided social media and open source footprint',
         'Developed calendar library in Kotlin',
-        'Assisted client with React.js and Ruby on Rails web application'
+        'Contributed to customer web application using React.js and Ruby on Rails'
       ]
     },
     {
@@ -173,6 +174,7 @@ export default {
         { name: 'TypeScript', value: 0.6 },
         { name: 'C#', value: 0.6 },
         { name: 'Kotlin', value: 0.4 },
+        { name: 'Ruby', value: 0.2 },
         { name: 'Python', value: 0.2 }
       ]
     },
@@ -184,11 +186,12 @@ export default {
         { name: 'Spring IoC', value: 1.0 },
         { name: 'Grails', value: 1.0 },
         { name: 'JUnit + Mockito', value: 1.0 },
-        { name: 'React', value: 0.8 },
+        { name: 'React', value: 0.9 },
         { name: 'Ext JS', value: 0.8 },
         { name: 'Jest', value: 0.6 },
         { name: 'AngularJS', value: 0.4 },
         { name: 'Vue.js', value: 0.4 },
+        { name: 'Rails', value: 0.2 },
         { name: 'Django', value: 0.2 }
       ]
     },
