@@ -1,5 +1,5 @@
 <template>
-  <q-page>
+  <q-page class="q-pb-lg">
 
     <div class="row">
       <q-parallax src="statics/images/computer-desk.jpeg">
@@ -66,13 +66,15 @@
         <div class="text-h3 text-center q-pt-xl q-pb-sm">Contact Us</div>
         <div class="q-pa-sm">
           <q-form @submit="onSubmit" ref="contactForm" class="q-gutter-md">
-            <q-input v-model="name" label="Your Name"
+            <q-input id="name" v-model="name" label="Your Name"
                      lazy-rules :rules="[ val => val && val.length > 0 || 'This field is required']" />
-            <q-input v-model="company" label="Company Name" lazy-rules :rules="[true]" />
-            <q-input v-model="email" type="email" label="Email"
+            <q-input id="company" v-model="company" label="Company Name" lazy-rules :rules="[true]" />
+            <q-input id="email" v-model="email" type="email" label="Email"
                      lazy-rules :rules="[ val => val && val.length > 0 || 'This field is required']" />
-            <q-input v-model="message" type="textarea" label="Message"
+            <q-input id="message" v-model="message" type="textarea" label="Message"
                      lazy-rules :rules="[ val => val && val.length > 0 || 'This field is required']" />
+
+            <div id="recaptcha" class="g-recaptcha" />
 
             <q-btn label="Submit" type="submit" color="primary" />
           </q-form>
@@ -97,11 +99,24 @@ export default {
   },
   methods: {
     onSubmit () {
+      // eslint-disable-next-line no-undef
+      const token = grecaptcha.getResponse()
+      if (!token) {
+        this.$q.notify({
+          color: 'red-5',
+          textColor: 'white',
+          icon: 'fas fa-exclamation-triangle',
+          message: 'Submission failed.  reCAPTCHA must be completed to proceed.'
+        })
+        return
+      }
+
       const formData = {
         name: this.name,
         company: this.company,
         email: this.email,
-        message: this.message
+        message: this.message,
+        recaptcha: token
       }
 
       fetch('/contact', {
@@ -116,6 +131,8 @@ export default {
           this.message = ''
 
           this.$refs.contactForm.resetValidation()
+          // eslint-disable-next-line no-undef
+          grecaptcha.reset()
 
           this.$q.notify({
             color: 'green-4',
@@ -132,6 +149,30 @@ export default {
           })
         }
       })
+    },
+    render () {
+      // eslint-disable-next-line no-undef
+      grecaptcha.render('recaptcha', {
+        sitekey: '6LeLj7cUAAAAAGZqCM62YQBSefrgx1Osnc6QdZb_'
+      })
+    },
+    renderWait () {
+      const self = this
+      setTimeout(() => {
+        // eslint-disable-next-line no-undef
+        if (typeof grecaptcha !== 'undefined' && grecaptcha.render) self.render()
+        else self.renderWait()
+      }, 200)
+    }
+  },
+  mounted: function () {
+    if (typeof grecaptcha === 'undefined') {
+      const script = document.createElement('script')
+      script.src = 'https://www.google.com/recaptcha/api.js?render=explicit'
+      script.onload = this.renderWait
+      document.head.appendChild(script)
+    } else {
+      this.render()
     }
   }
 }

@@ -2,11 +2,13 @@
 
 const functions = require('firebase-functions');
 const nodemailer = require('nodemailer');
+const fetch = require('node-fetch');
 
 // A valid gmail account is required.  You'll need to configure these as cloud environment variables.
 const gmailEmail = functions.config().gmail.email;
 const gmailPassword = functions.config().gmail.password;
 const contactEmail = functions.config().contact.email;
+const recaptchaSecret = functions.config().recaptcha.secret
 
 const mailTransport = nodemailer.createTransport({
     service: "Gmail",
@@ -32,6 +34,26 @@ const sendContactEmail = async (formData) => {
     await fireEmail(mailOptions);
 };
 
+const validateRecaptcha = async (token) => {
+    if (!token) {
+       throw new Error("The request was not validated with recaptcha")
+    }
+
+    const response = await fetch('https://www.google.com/recaptcha/api/siteverify', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/x-www-form-urlencoded'
+      },
+      body: `secret=${recaptchaSecret}&response=${token}`
+    })
+
+    const json = await response.json()
+    console.log(`JSON.success: ${json.success}, ${json['error-codes']}`)
+    if (json.success !== true) {
+      throw new Error(`reCAPTCHA verify was unsuccessful: ${json['error-codes']} (token: ${token})`)
+    }
+};
+
 exports.onContactSubmitted = functions.https.onRequest(async (req, res) => {
     if (req.method !== 'POST') {
         res.setHeader("Allow", "POST");
@@ -40,9 +62,10 @@ exports.onContactSubmitted = functions.https.onRequest(async (req, res) => {
 
     const formData = req.body;
     try {
-        //here we send new data using function for sending emails
+        await validateRecaptcha(formData.recaptcha)
+
         await sendContactEmail(formData);
-    
+
         return res.sendStatus(201);
     }
     catch (ex) {
