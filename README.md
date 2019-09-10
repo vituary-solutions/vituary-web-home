@@ -14,6 +14,7 @@ This project contains primarily JavaScript source code, leveraging the following
 - [Vue.js](https://vuejs.org/) - Primary Application Framework
 - [Quasar](https://quasar.dev/) - UI Framework for Vue.js following [Material Design](https://material.io/) guidelines
 - [Stylus](http://stylus-lang.com/) - CSS generating language
+- [reCAPTCHA](https://developers.google.com/recaptcha) - Uses a checkbox to protect contact form submission
 
 ### Serverless Deployment
 
@@ -78,11 +79,12 @@ firebase deploy
 See [Setup Reference](https://firebase.google.com/docs/web/setup/) for setting up a Firebase project.  At a minimum you
 will need to create a project and register your app.
 
-The cloud functions portion of the application requires a minimum of 3 settings:
+The cloud functions portion of the application requires these minimum settings:
 ```bash
 firebase functions:config:set gmail.email=<from-email>
 firebase functions:config:set gmail.password=<from-password>
 firebase functions:config:set contact.email=<to-email>
+firebase functions:config:set recaptcha.secret=<recaptcha-serverside-key>
 ```
 
 To reference the settings locally, export them to a local hidden file.  Do not commit this file!
