@@ -17,7 +17,7 @@
 
     <q-footer elevated class="bg-primary text-white">
       <q-toolbar>
-        <q-toolbar-title class="text-center">© 2019 Vituary Solutions Inc.</q-toolbar-title>
+        <q-toolbar-title class="text-center">© 2019 - 2020 Vituary Solutions Inc.</q-toolbar-title>
       </q-toolbar>
     </q-footer>
 

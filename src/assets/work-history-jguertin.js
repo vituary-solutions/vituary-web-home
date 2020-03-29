@@ -24,6 +24,20 @@ export default {
       ]
     },
     {
+      company: 'BC Registries - Personal Property Registry (Contract)',
+      url: 'https://github.com/bcgov/ppr',
+      position: 'Senior Software Developer and Technical Lead',
+      start: 'November 2019',
+      end: 'April 2020',
+      summary: 'Contributed as a team member working to replace the long lived BC Personal Property Registry.',
+      highlights: [
+        'Designed and developed a RESTful API leveraging Python and FastAPI',
+        'Contributed to web application built with Vue.js and Typescript',
+        'Implemented build and deployment scripts using GitHub Actions and OpenShift',
+        'Assisted in developing a migration plan from the legacy system'
+      ]
+    },
+    {
       company: 'Complia Health',
       url: 'http://www.compliahealth.com/',
       position: 'Development Team Lead',
@@ -159,7 +173,7 @@ export default {
         { name: 'Kanban', value: 1.0 },
         { name: 'Test Driven Development', value: 1.0 },
         { name: 'Continuous Integration', value: 1.0 },
-        { name: 'Continuous Delivery', value: 0.8 },
+        { name: 'Continuous Delivery', value: 0.9 },
         { name: 'DevOps', value: 0.8 },
         { name: 'Microservices', value: 0.6 }
       ]
@@ -170,12 +184,11 @@ export default {
       values: [
         { name: 'Java', value: 1.0 },
         { name: 'Groovy', value: 1.0 },
-        { name: 'JavaScript', value: 0.8 },
-        { name: 'TypeScript', value: 0.6 },
+        { name: 'JavaScript', value: 0.9 },
+        { name: 'Python', value: 0.8 },
+        { name: 'TypeScript', value: 0.7 },
         { name: 'C#', value: 0.6 },
-        { name: 'Kotlin', value: 0.4 },
-        { name: 'Ruby', value: 0.2 },
-        { name: 'Python', value: 0.2 }
+        { name: 'Kotlin', value: 0.6 }
       ]
     },
     {
@@ -188,11 +201,9 @@ export default {
         { name: 'JUnit + Mockito', value: 1.0 },
         { name: 'React', value: 0.9 },
         { name: 'Ext JS', value: 0.8 },
+        { name: 'Vue.js', value: 0.6 },
         { name: 'Jest', value: 0.6 },
-        { name: 'AngularJS', value: 0.4 },
-        { name: 'Vue.js', value: 0.4 },
-        { name: 'Rails', value: 0.2 },
-        { name: 'Django', value: 0.2 }
+        { name: 'AngularJS', value: 0.4 }
       ]
     },
     {
@@ -201,9 +212,10 @@ export default {
       values: [
         { name: 'RDBMS', value: 1.0 },
         { name: 'Gradle', value: 1.0 },
-        { name: 'Docker', value: 0.8 },
-        { name: 'Git', value: 0.8 },
+        { name: 'Docker', value: 0.9 },
+        { name: 'Git', value: 0.9 },
         { name: 'Jenkins', value: 0.8 },
+        { name: 'OpenShift', value: 0.8 },
         { name: 'Redis', value: 0.6 },
         { name: 'RabbitMQ', value: 0.6 },
         { name: 'Elasticsearch', value: 0.6 },
